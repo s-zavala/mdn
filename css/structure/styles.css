@@ -1,0 +1,57 @@
+.special {
+  color: red;
+}
+
+p {
+    color: blue;
+  }
+
+p {
+  color: red;
+}
+
+h1 {
+    color: navy;
+  }
+  
+a:link {
+  color: ;
+  text-decoration: none;
+}
+  
+.many-things {
+  line-height: 10em;
+  border: thick double blue;
+}
+  
+#one-thing {
+  padding: 3em 3em;
+  border: solid grey;
+}
+  
+* {
+  font-style: ;
+  font-family: helvetica;
+}
+  
+.box {
+  border: solid purple;
+}
+  
+
+/* styles.css | file:///home/sofia/code/mdn/css/structure/styles.css */
+
+p {
+  font-size: 1.25em;
+}
+
+.box {
+  width: 30%;
+  background-color: antiquewhite;
+}
+
+/* Inline #1 | file:///home/sofia/code/mdn/css/structure/index.html */
+
+body {
+  background: cornsilk;
+}
