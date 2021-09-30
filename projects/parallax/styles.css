@@ -1,0 +1,88 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4 {
+    position: relative;
+    opacity: 0.75;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1,
+.bgimg-4 {
+    background-image: url("images/parralax_1.jpg");
+}
+
+.bgimg-1 {
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("images/parallax_2.jpg");
+    min-height: 500px;
+}
+
+.bgimg-3 {
+    background-image: url("images/parallax_3.jpg");
+    min-height: 500px;
+}
+
+.bgimg-4 {
+    min-height: 300px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption h1 {
+    background-color: #0779bf;
+    color: #fff;
+    padding: 18px;
+    font-size: 3rem;
+    letter-spacing: 6px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 2.6rem;
+    text-align: center;
+    color: #000;
+}
+
+p {
+    color: #000;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+footer {
+    padding: 20px 20px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
