@@ -1,0 +1,8 @@
+html {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background: url(images/kazberg_panorama_1280w.jpg) no-repeat center;
+    height: 150px;
+}
