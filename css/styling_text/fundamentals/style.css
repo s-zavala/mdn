@@ -1,0 +1,21 @@
+:root {
+    font-size: 10px;
+}
+
+h1 {
+    font-family: Merriweather, Georgia, serif;
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 3px blueviolet;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: "Fuzzy Bubbles", cursive;
+    font-size: 2rem;
+}
+
+p {
+    font-family: Nunito, Veranda, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}

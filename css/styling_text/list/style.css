@@ -1,0 +1,46 @@
+/* General styles */
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+  
+h2 {
+    font-size: 2rem;
+}
+
+ul,ol,dl,p {
+    font-size: 1.5rem;
+}
+
+/* Keep vertical rhythm consistant*/
+li, p {
+    line-height: 1.5;
+}
+
+/* Description list styles */
+/* Keep consistent with paragraph*/
+dd, dt {
+    line-height: 1.5;
+}
+  
+dt {
+    font-weight: bold;
+}
+
+/* List */
+ul {
+    padding-left: 2rem;
+    list-style-position: inside;
+}
+
+ul li {
+    padding-left: 2rem;
+    list-style-type: circle;
+}
+
+ol li {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    
+}
