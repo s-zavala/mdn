@@ -1,0 +1,8 @@
+# Thoughts
+body {
+    margin: north-south east-west;
+}
+a {
+    padding: n-s e-w ?;
+}
+    padding: top horizontal bottom;
