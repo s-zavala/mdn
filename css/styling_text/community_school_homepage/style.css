@@ -109,12 +109,22 @@ h2 + p {
   text-indent: 20px;
 }
 
+ul {
+  list-style-type: square;
+}
+
 /* Links */
 
 a {
   outline: none;
   padding: 2px 1px 0;
   text-decoration: none;
+}
+
+a.external {
+  background: url("external-link-52.png") no-repeat 100% 0;
+  background-size: 12px 12px;
+  padding-right: 19px;
 }
 
 a:link {
@@ -126,22 +136,49 @@ a:visited {
   color: var(--main-deep);
 }
 
-a:focus {
- border-bottom: none;
-}
-
+a:focus,
 a:hover {
-  color: #633636;
+  color: var(--main-deep);
   border-bottom: none;
 }
 
 a:active {
-  background-color: var(--main-color);
+  background-color: var(--main-deep);
   color: #FFF;
 }
 
-a.external {
-  background: url("external-link-52.png") no-repeat 100% 0;
-  background-size: 12px 12px;
-  padding-right: 19px;
+/* Navigation menu */
+
+nav {
+  margin: 0;              
+}
+
+nav ul {
+  padding: 0;
+  width: 100%;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid;
+  padding: 20px;
+  margin: 10px;
+  width: 70%;
+  text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--main-deep);
+  border-bottom: 1px solid;
+}
+
+nav a:active {
+  color: #FFF;
 }
