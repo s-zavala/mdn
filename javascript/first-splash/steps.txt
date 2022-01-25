@@ -1,0 +1,14 @@
+/*
+- Introduce player to rules.
+- Ask player to guess number and submit.
+- If guess correct end game.
+    - Prevent player from submitting a new guess.
+    - Display 'Start New Game' button.
+- If the guess is incorrect
+    - update turn tally. If greater than 10 end game.
+        - Prevent player from submitting a new guess.
+        - Display 'Start New Game' button.
+    - update 'Previous Guesses'
+    - print if guess is too high or too low
+- When game restarts clear variables, logic, UI.
+*/
