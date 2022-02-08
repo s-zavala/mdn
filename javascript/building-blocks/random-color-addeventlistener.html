@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random color example — event handler attribute</title>
+    <style>
+      button {
+        margin: 10px
+      };
+    </style>
+  </head>
+  <body>
+    <button>Change color</button>
+    <script>
+      const btn = document.querySelector('button');
+
+      function random(number) {
+        return Math.floor(Math.random()*number);
+      }
+
+      function bgChange() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+      }
+
+      function bgChangeAlpha() {
+        const rndColor = "rgba(" + random(255) + "," + random(255) + "," + random(255) + "," + Math.random()/2 + ")";
+        document.body.style.backgroundColor = rndColor;
+      }
+
+      const controller = new AbortController()
+
+      btn.addEventListener('click', bgChange);
+      btn.addEventListener("focus", bgChangeAlpha);
+      btn.addEventListener("blur", () => {
+        document.body.style.backgroundColor = "rgb(0,0,0)";
+      })
+      btn.addEventListener("dblclick", () => {
+        document.body.style.backgroundColor = "rgb(255,255,255)";
+      })
+      btn.addEventListener("mouseover", () => {
+        document.body.style.backgroundColor = "red";
+      }, { signal: controller.signal })
+      btn.addEventListener("mouseout", () => {
+        document.body.style.backgroundColor = "green";
+      })
+      btn.removeEventListener("focus", bgChangeAlpha);
+      controller.abort()
+    </script>
+  </body>
+</html>
