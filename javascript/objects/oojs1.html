@@ -26,14 +26,49 @@
 
   </body>
   <script>
-  class Shape {
+    class Shape {
 
-    name;
-    sides;
-    sideLength;
+      name;
+      sides;
+      sideLength;
 
-  }
+      constructor(name, sides, sideLength) {
+          this.name = name;
+          this.sides = sides;
+          this.sideLength = sideLength;
+      }
 
+      calcPerimeter() {
+          const perimeter = this.sides * this.sideLength;
+          console.log(`The perimeter of this ${this.name} is ${perimeter}. `);
+      }
+    }
+
+//   const square = new Shape("Square", 4, 5);
+//   square.calcPerimeter();
+//   const triangle = new Shape("Triangle", 3, 3);
+//   triangle.calcPerimeter();
+
+    class Square extends Shape {
+      name;
+      sideLength;
+      sides;
+
+      constructor(sideLength) {
+        this.sideLength = sideLength;
+        this.sides = 4;
+        this.name = "square";
+      }
+
+      calcArea() {
+        const area = this.sideLength * this.sideLength;
+        console.log(`The area of this ${this.name} is ${this.area}. `);
+      }
+    }
+
+    const square = new Square(10);
+    square.calcArea();
+    square.calcPerimeter();
   </script>
 
 </html>
