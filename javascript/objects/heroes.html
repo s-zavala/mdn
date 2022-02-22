@@ -25,7 +25,7 @@
 
     async function populate() {
       // Use Fetch API to retrieve resource(json) from server.
-      const requestURL = "ttps://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+      const requestURL = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
       const request = new Request(requestURL);
 
       const response = await fetch(request);
@@ -36,8 +36,7 @@
     }
 
     function populateHeader(obj) {
-      const header = document.querySelector("header");
-      const myH1 = document.querySelector("h1");
+      const myH1 = document.createElement("h1");
       myH1.textContent = obj["squadName"];
       header.appendChild(myH1);
 
@@ -47,20 +46,20 @@
     }
 
     function populateHeroes(obj) {
-      const section = document.querySelector("section");
-      for (let hero of object["members"]) {
+      // Iterate over hero Objects.
+      for (let hero of obj["members"]) {
         let article = document.createElement("article");
         let myH2 = document.createElement("h2");
-        myH2.textContent = obj[hero]["name"];
+        myH2.textContent = hero["name"];
         article.appendChild(myH2);
 
         let heroPara = document.createElement("p");
-        heroPara.textContent = `Secret identity: ${obj[hero]["secretIdentity"]}\n`;
-        heroPara.textContent += `Age: ${obj[hero]["age"]}\n`;
+        heroPara.textContent = `Secret identity: ${hero["secretIdentity"]}\n`;
+        heroPara.textContent += `Age: ${hero["age"]}\n`;
         article.appendChild(heroPara);
         
         let heroList = document.createElement("ul");
-        for (let power of obj[hero]["powers"]) {
+        for (let power of hero["powers"]) {
           let heroListItem = document.createElement("li");
           heroListItem.textContent = power;
           heroList.appendChild(heroListItem);
