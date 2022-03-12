@@ -42,30 +42,52 @@
       let male = 0;
 
       // Add your code here
-
       let cats = JSON.parse(catString);
+      // Loop over mother cats.
+      for (const momObj of cats) {
+        // Add mother cat names with template literal.
+        if (momObj === cats[cats.length - 1]) {
+          motherInfo += ` and ${momObj["name"]}. `
+        }
+        else {
+          motherInfo += `${momObj["name"]}, `;
+        }
 
-  for(let i = 0; i < cats.length; i++) {
-    for(let j = 0; j < cats[i].kittens.length; j++) {
-      total++;
-      if(cats[i].kittens[j].gender === 'm') {
-        male++;
+        total += momObj["kittens"].length;
+        // Loop over kittens.
+        for (const k of momObj["kittens"]) {
+          if (k["gender"] === "m") {
+            male++
+          }
+        }
       }
-    }
 
-    if(i < (cats.length - 1)) {
-      motherInfo += `${ cats[i].name }, `;
-    } else {
-      motherInfo += `and ${ cats[i].name }.`;
-    }
-  }
-
-  kittenInfo  = `There are ${ total } kittens in total, ${ male } males and ${ total - male } females.`;
-
-    // Don't edit the code below here!
+      kittenInfo = `The total number of kittens is ${total}. `;
+      kittenInfo += `The number of male kittens is ${male}. `;
+      kittenInfo += `The number of female kittens is ${total - male}. `;
 
       para1.textContent = motherInfo;
       para2.textContent = kittenInfo;
+  //     let cats = JSON.parse(catString);
+
+  // for(let i = 0; i < cats.length; i++) {
+  //   for(let j = 0; j < cats[i].kittens.length; j++) {
+  //     total++;
+  //     if(cats[i].kittens[j].gender === 'm') {
+  //       male++;
+  //     }
+  //   }
+
+  //   if(i < (cats.length - 1)) {
+  //     motherInfo += `${ cats[i].name }, `;
+  //   } else {
+  //     motherInfo += `and ${ cats[i].name }.`;
+  //   }
+  // }
+
+  // kittenInfo  = `There are ${ total } kittens in total, ${ male } males and ${ total - male } females.`;
+
+    // Don't edit the code below here!
     }
 
     section.appendChild(para1);
