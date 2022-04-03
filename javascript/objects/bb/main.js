@@ -6,6 +6,17 @@ const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
+// setup score keeper
+
+const para = document.querySelector('p');
+let score = 0;
+
+function updateScore(increment) {
+  score += increment
+  para.textContent = `Ball count: ${score}`;
+}
+
+
 // function to generate random number
 
 function random(min, max) {
@@ -87,6 +98,7 @@ class EvilBall extends Shape {
 
         if (distance < this.size + ball.size) {
           ball.exists = false;
+          updateScore(-1);
         }
       }
     }
@@ -101,6 +113,7 @@ class Ball extends Shape {
     this.color = color;
     this.size = size;
     this.exists = true;
+    updateScore(+1);
   }
 
   draw() {

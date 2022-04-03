@@ -1,6 +1,6 @@
 html, body {
-    margin: 0;
-  }
+margin: 0;
+}
 
 html {
 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -10,6 +10,14 @@ height: 100%;
 body {
 overflow: hidden;
 height: inherit;
+}
+
+p {
+position: absolute;
+margin: 0;
+top: 35px;
+right: 5px;
+color: #aaa;
 }
 
 h1 {
@@ -23,3 +31,4 @@ right: 5px;
 color: transparent;
 text-shadow: 0 0 4px white;
 }
+  
