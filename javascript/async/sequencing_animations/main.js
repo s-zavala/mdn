@@ -14,25 +14,25 @@ const alice2 = document.querySelector("#alice2");
 const alice3 = document.querySelector("#alice3");
 
 function animeate1(init, callback) {
-  const result = init.animate(aliceTumbling, aliceTiming);
-  callback(result.finished);
+  init.animate(aliceTumbling, aliceTiming);
+  callback(0);
 }
 
 function animate2(init, callback) {
-  const result = init.animate(aliceTumbling, aliceTiming);
-  callback(result.finished);
+  init.animate(aliceTumbling, aliceTiming);
+  callback(0);
 }
 
 function animate3(init, callback) {
-  const result = init.animate(aliceTumbling, aliceTiming);
-  callback(result.finished)
+  init.animate(aliceTumbling, aliceTiming);
+  callback(0)
 }
 
 function doOperation() {
-  animeate1(alice1, result1 => {
-    animate2(alice2, result2 => {
-      animate3(alice3, result3 => {
-        console.log(`Hello Alice`);
+  animeate1(alice1, nul => {
+    animate2(alice2, nul => {
+      animate3(alice3, nul => {
+        console.log("Hello world.")
       });
     });
   });
